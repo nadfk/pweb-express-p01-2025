@@ -4,6 +4,8 @@ import dotenv from "dotenv";
 
 import authRoutes from "./routes/auth";
 import healthRoutes from "./routes/health";
+import genreRoutes from "./routes/genre";
+import booksRoutes from "./routes/books";
 
 dotenv.config();
 
@@ -13,5 +15,7 @@ app.use(express.json());
 
 app.use("/auth", authRoutes);
 app.use("/health-check", healthRoutes);
+app.use("/genre", genreRoutes);
+app.use("/books", booksRoutes);
 
 export default app;
