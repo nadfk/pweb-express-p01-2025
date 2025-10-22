@@ -6,6 +6,7 @@ import authRoutes from "./routes/auth";
 import healthRoutes from "./routes/health";
 import genreRoutes from "./routes/genre";
 import booksRoutes from "./routes/books";
+import transactionRoutes from "./routes/transaction";
 
 dotenv.config();
 
@@ -17,5 +18,6 @@ app.use("/auth", authRoutes);
 app.use("/health-check", healthRoutes);
 app.use("/genre", genreRoutes);
 app.use("/books", booksRoutes);
+app.use("/transactions", transactionRoutes);
 
 export default app;
